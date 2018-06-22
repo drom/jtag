@@ -1,0 +1,43 @@
+{
+  "name": "jtag",
+  "version": "0.1.0",
+  "description": "JavaScript JTAG library and tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/drom/jtag.git"
+  },
+  "keywords": [
+    "JTAG",
+    "FTDI",
+    "SVF"
+  ],
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/drom/jtag/issues"
+  },
+  "homepage": "https://gitlab.com/drom/jtag#README",
+  "devDependencies": {
+    "@drom/eslint-config": "^0.7.0",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node4",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "dependencies": {
+    "progress": "^2.0.0",
+    "usb": "^1.3.2"
+  }
+}
