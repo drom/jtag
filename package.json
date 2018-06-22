@@ -4,7 +4,8 @@
   "description": "JavaScript JTAG library and tools",
   "main": "index.js",
   "scripts": {
-    "test": "eslint lib"
+    "test": "eslint lib",
+    "browserify": "browserify web/src/app.js -o web/app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://gitlab.com/drom/jtag#README",
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
+    "browserify": "^16.2.2",
     "eslint": "^4.19.1",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2"
