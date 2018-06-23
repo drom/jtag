@@ -3,13 +3,19 @@
 
 const usb = require('usb');
 
-usb.getDeviceList().some(dev => {
+usb.getDeviceList().some((dev, i) => {
     if (dev.deviceDescriptor.idVendor === 0x0403) {
         dev.open();
-        const if0 = dev.interfaces[0];
-        if (if0.isKernelDriverActive()) {
-            if0.detachKernelDriver();
-        }
-        dev.close();
+        const iSerialNumber = dev.deviceDescriptor.iSerialNumber;
+        dev.getStringDescriptor(iSerialNumber, (err, buf) => {
+            console.log(i, buf);
+            const if0 = dev.interfaces[0];
+            // console.log(if0);
+            if (if0.isKernelDriverActive()) {
+                if0.detachKernelDriver();
+                console.log('detached');
+            }
+            dev.close();
+        });
     }
 });
