@@ -1,4 +1,5 @@
-test_async:
+test:node:8:
+  image: node:8
   script:
    - npm install
    - npm test
