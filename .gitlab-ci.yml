@@ -1,9 +1,15 @@
 before_script:
   - apt-get update -qq && apt-get install -y -qq libudev-dev libusb-1.0-0-dev
 
-test:node:8:
-  image: node:8
+.test_node &test_node
   script:
    - npm install
    - npm test
-   - node bin/detach.js
+
+test:node:8
+  <<: *test_node
+  image:node:8
+
+test:node:10
+  <<: *test_node
+  image:node:10
