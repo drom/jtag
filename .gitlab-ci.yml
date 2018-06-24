@@ -6,10 +6,10 @@ before_script:
    - npm install
    - npm test
 
-test:node:8
+test:node:8:
   <<: *test_node
   image:node:8
 
-test:node:10
+test:node:10:
   <<: *test_node
   image:node:10
