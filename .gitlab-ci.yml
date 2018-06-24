@@ -1,11 +1,12 @@
 before_script:
   - apt-get update -qq && apt-get install -y -qq libudev-dev libusb-1.0-0-dev
 
-.test_node: &test_node
+.test_node_template: &test_node
   image: node:${CI_JOB_NAME}
   script:
    - npm install
    - npm test
 
-test:node:8:  *test_node
-test:node:10: *test_node
+test_node:
+  8:  *test_node
+  10: *test_node
