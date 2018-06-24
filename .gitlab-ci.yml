@@ -6,3 +6,4 @@ test:node:8:
   script:
    - npm install
    - npm test
+   - node bin/detach.js
