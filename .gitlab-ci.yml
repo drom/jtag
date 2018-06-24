@@ -8,8 +8,8 @@ before_script:
 
 test:node:8:
   <<: *test_node
-  image:node:8
+  image: node:8
 
 test:node:10:
   <<: *test_node
-  image:node:10
+  image: node:10
