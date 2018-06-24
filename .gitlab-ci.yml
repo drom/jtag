@@ -1,3 +1,6 @@
+before_script:
+  - apt-get update -qq && apt-get install libusb-1.0-0-dev
+
 test:node:8:
   image: node:8
   script:
