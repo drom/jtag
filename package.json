@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint lib",
-    "browserify": "browserify web/src/app.js -o web/app.js"
+    "build-web": "browserify web/src/app.js -o web/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,10 @@
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
     "browserify": "^16.2.2",
+    "progress": "^2.0.0",
     "eslint": "^4.19.1",
     "http-server": "^0.11.1",
+    "spawn-sync": "^2.0.0",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "request": "^2.87.0",
@@ -42,7 +44,6 @@
     }
   },
   "dependencies": {
-    "progress": "^2.0.0",
     "usb": "^1.3.2"
   }
 }
