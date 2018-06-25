@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "JavaScript JTAG library and tools",
   "main": "index.js",
+  "bin": {
+    "svf2ftdi": "bin/svf2ftdi.js"
+  },
   "scripts": {
     "test": "eslint lib",
     "build-web": "browserify web/src/app.js -o web/app.js"
