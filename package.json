@@ -1,5 +1,5 @@
 {
-  "name": "jtag",
+  "name": "jtag.ftdi",
   "version": "0.1.0",
   "description": "JavaScript JTAG library and tools",
   "main": "index.js",
@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/drom/jtag.git"
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "keywords": [
     "JTAG",
     "FTDI",
@@ -25,14 +29,9 @@
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
     "browserify": "^16.2.2",
-    "progress": "^2.0.0",
     "eslint": "^4.19.1",
-    "http-server": "^0.11.1",
-    "spawn-sync": "^2.0.0",
     "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "request": "^2.87.0",
-    "yargs": "^11.0.0"
+    "nyc": "^12.0.2"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node4",
@@ -44,6 +43,9 @@
     }
   },
   "dependencies": {
-    "usb": "^1.3.2"
+    "request": "^2.87.0",
+    "progress": "^2.0.0",
+    "usb": "^1.3.2",
+    "yargs": "^11.0.0"
   }
 }
