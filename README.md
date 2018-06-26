@@ -1,3 +1,5 @@
+[![NPM version](https://img.shields.io/npm/v/jtag.ftdi.svg)](https://www.npmjs.org/package/jtag.ftdi)
+
 JTAG / FTDI related JavaScript library and tools.
 
 ## Installation
