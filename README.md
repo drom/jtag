@@ -36,6 +36,8 @@ is a series of USB 2.0 ICs that can be used for high speed serial communication 
 
 ## Tools
 
+### svf2ftdi
+
 ```sh
 ./node_modules/.bin/svf2ftdi
 
