@@ -31,6 +31,11 @@ const options = yargs
         type: 'string',
         describe: 'FTDI serial number divisor'
     })
+    .option('freq', {
+        type: 'number',
+        describe: 'FTDI TCK frequency',
+        default: 30e6
+    })
     .version()
     .help()
     .argv;
