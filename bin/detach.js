@@ -10,7 +10,6 @@ usb.getDeviceList().some((dev, i) => {
         dev.getStringDescriptor(iSerialNumber, (err, buf) => {
             console.log(i, buf);
             const if0 = dev.interfaces[0];
-            // console.log(if0);
             if (if0.isKernelDriverActive()) {
                 if0.detachKernelDriver();
                 console.log('detached');

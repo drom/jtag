@@ -47,8 +47,6 @@ const options = yargs
     .help()
     .argv;
 
-// console.log(options);
-
 let source;
 if (process.stdin.isTTY) {
     if (options.file) {
