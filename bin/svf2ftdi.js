@@ -43,6 +43,11 @@ const options = yargs
         describe: 'FTDI channel',
         default: 0
     })
+    .option('progress', {
+        alias: 'p',
+        boolean: true,
+        describe: 'Show progress bar'
+    })
     .version()
     .help()
     .argv;
