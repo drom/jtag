@@ -53,30 +53,30 @@ const options = yargs
     .argv;
 
 let source;
+
+if (options.file) {
+    const fileName = path.resolve(process.cwd(), options.file);
+    source = fs.ReadStream(fileName);
+} else
+if (options.url) {
+    source = request
+        .get(options.url)
+        .on('error', function (error) {
+            throw new Error(error);
+        })
+        .on('response', function (response) {
+            // const contentType = response.headers['content-type']
+            //     .split(';').map(e => e.trim());
+            if (response.statusCode !== 200 /* || contentType[0] === 'text/html' */) {
+                throw new Error(JSON.stringify({
+                    status: response.statusCode,
+                    'content-type': response.headers['content-type']
+                }));
+            }
+            // console.log(response.statusCode, response.headers['content-type']);
+        });
+} else
 if (process.stdin.isTTY) {
-    if (options.file) {
-        const fileName = path.resolve(process.cwd(), options.file);
-        source = fs.ReadStream(fileName);
-    } else
-    if (options.url) {
-        source = request
-            .get(options.url)
-            .on('error', function (error) {
-                throw new Error(error);
-            })
-            .on('response', function (response) {
-                const contentType = response.headers['content-type']
-                    .split(';').map(e => e.trim());
-                if (response.statusCode !== 200 || contentType[0] === 'text/html') {
-                    throw new Error(JSON.stringify({
-                        status: response.statusCode,
-                        'content-type': response.headers['content-type']
-                    }));
-                }
-                // console.log(response.statusCode, response.headers['content-type']);
-            });
-    }
-} else {
     source = process.stdin.setEncoding('ascii');
 }
 
