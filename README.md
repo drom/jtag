@@ -7,7 +7,7 @@ JTAG / FTDI related JavaScript library and tools.
 Package can be installed from NPM
 
 ```sh
-npm install jtag.ftdi
+npm install jtag.ftdi --build-from-source=usb
 ```
 
 The package depends on [node-usb](https://github.com/tessel/node-usb) that depends on `libusb` library that have to be installed:
