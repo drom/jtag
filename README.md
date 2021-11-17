@@ -2,6 +2,8 @@
 
 JTAG / FTDI related JavaScript library and tools.
 
+Imported from: https://gitlab.com/drom/jtag
+
 ## Installation
 
 Package can be installed from NPM
