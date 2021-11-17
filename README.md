@@ -1,4 +1,4 @@
-[![NPM version](https://img.shields.io/npm/v/jtag.ftdi.svg)](https://www.npmjs.org/package/jtag.ftdi)
+[![NPM version](https://img.shields.io/npm/v/jtag.ftdi.svg)](https://www.npmjs.org/package/jtag.ftdi)[![Linux](https://github.com/drom/jtag/actions/workflows/linux.yml/badge.svg?branch=trunk)](https://github.com/drom/jtag/actions/workflows/linux.yml)
 
 JTAG / FTDI related JavaScript library and tools.
 
