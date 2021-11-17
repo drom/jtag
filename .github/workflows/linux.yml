@@ -13,7 +13,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: apt-get
-      run: apt-get install -y libudev-dev libusb-1.0-0-dev
+      run: sudo apt-get install -y libudev-dev libusb-1.0-0-dev
     - name: npm install, build, and test
       run: |
         node --version
