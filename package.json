@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/drom/jtag.git"
+    "url": "git+ssh://git@github.com/drom/jtag.git"
   },
   "files": [
     "lib",
@@ -27,23 +27,21 @@
   "author": "Aliaksei Chapyzhenka",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/drom/jtag/issues"
+    "url": "https://github.com/drom/jtag/issues"
   },
-  "homepage": "https://gitlab.com/drom/jtag#README",
+  "homepage": "https://github.com/drom/jtag#README",
   "devDependencies": {
-    "@drom/eslint-config": "^0.10.0",
-    "browserify": "^17.0.0",
-    "eslint": "^8.2.0",
-    "mocha": "^9.1.3",
-    "nyc": "^15.0.0"
+    "@drom/eslint-config": "^0.12.0",
+    "browserify": "^17.0.1",
+    "eslint": "^8.57.1",
+    "mocha": "^9.2.2",
+    "nyc": "^17.1.0"
   },
   "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint4/node4",
-    "parserOptions": {
-      "ecmaVersion": 2017
-    },
+    "extends": "@drom/eslint-config/eslint8/node12",
     "rules": {
-      "no-console": 0
+      "no-console": 0,
+      "indent": [1, 4]
     }
   },
   "dependencies": {
